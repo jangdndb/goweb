@@ -4,7 +4,7 @@ MAINTAINER "jang <jangoper@naver.com>"
 LABEL "purpose"="webserver practice"
 
 WORKDIR /usr/src/goapp
-COPY goapp.go .
+COPY ./goapp.go .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /usr/local/bin/gostart
 
 FROM scratch AS runtime-stage
